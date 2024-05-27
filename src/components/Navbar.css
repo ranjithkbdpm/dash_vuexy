@@ -52,3 +52,44 @@
     color:rgb(182, 190, 227);
 }
 
+
+/* search box */
+
+.searchBox{
+    position:relative;
+}
+
+.searchBox input{
+    border:0;
+    padding-left:2rem;
+}
+
+.searchIcon {
+    position:absolute;
+    left:0.7rem;
+    top:25%;
+}
+
+.searchClsBtn {
+    display:none !important;
+    position:absolute;
+    left:85%;
+}
+.searchBtnCol{
+    display: none!important;
+  }
+
+
+@media (max-width:760px){
+    .searchBtnCol{
+        display: block!important;
+      } 
+
+    .searchBox{
+        display: none;
+    }
+}
+
+
+
+

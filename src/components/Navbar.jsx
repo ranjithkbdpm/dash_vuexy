@@ -2,7 +2,7 @@
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun, faBell } from '@fortawesome/free-regular-svg-icons';
-import { faLanguage, faBorderAll, faSearch, faBars} from '@fortawesome/free-solid-svg-icons';
+import { faLanguage, faBorderAll, faSearch, faBars, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import image from '../assets/img/1.png';
 
 
@@ -20,19 +20,35 @@ const Navbar = ({isDarkMode, toggleTheme, toggleSidebar}) => {
           </button>
 
           {/* seach and nav buttons */}
-          <div className={`${isDarkMode ? 'darkText' : 'whiteText'} searchBar ms-2`}>
+          {/* <div className={`${isDarkMode ? 'darkText' : 'whiteText'} searchBar ms-2`}>
             <div className={`input-group`}>
               <input  type="text" className={`form-control`} placeholder="Search" aria-label="Search"   aria-describedby="basic-addon2"/>
               <span className="input-group-text" id="basic-addon2">
                 <FontAwesomeIcon icon={faSearch} />
               </span>
           </div>
-          </div>
+          </div> */}
+          
          
 
           {/* buttons */}
           <div className='me-2 ms-auto'>
+          
             <ul className='nav align-items-center'>
+              <i className="nav-item">
+                <div className="wrap d-flex ms-2">
+                  <div className="searchBox" id="searchInp">
+                    <input type="search" className={`h-100 ${isDarkMode ? 'darkText darkTheme' : 'whiteText bg-light'}`}/>
+                    <button className="searchbtn btn h-100 p-1">
+                        <FontAwesomeIcon className={`${isDarkMode ? 'darkText' : 'whiteText'} fa-solid fa-magnifying-glass searchIcon`} icon={faMagnifyingGlass}></FontAwesomeIcon>
+                    </button>
+                </div>
+                    <button onClick="showInput()" className="btn searchBtnCol h-100">
+                      <FontAwesomeIcon className={`${isDarkMode ? 'darkText' : 'whiteText'} fa-solid fa-magnifying-glass`} icon={faMagnifyingGlass}></FontAwesomeIcon>
+                    </button>
+                </div>
+              </i>
+
               <i className="nav-item">
                 <button className={`btn`}>            
                   <FontAwesomeIcon className={`${isDarkMode ? 'darkText' : 'whiteText'}`} 

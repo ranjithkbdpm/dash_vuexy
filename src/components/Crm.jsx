@@ -71,7 +71,7 @@ function Crm({isDarkMode}) {
 
   return (
     <>
-      <div className='row crmWrapper w-100'>
+      <div className='row crmWrapper w-100 align-items-stretch'>
 
           {/* sales */}
             <div className={`col-6 col-xl-2 col-md-4 mb-4`}>
@@ -120,7 +120,7 @@ function Crm({isDarkMode}) {
 
             {/* total Profit */}
             <div className='col-6 col-xl-2 col-md-4 mb-4'>
-                <div className={`card totalProfitCard ${isDarkMode ? 'darkTheme' : 'bg-light whiteText'}`}>
+                <div className={`card h-100 totalProfitCard ${isDarkMode ? 'darkTheme' : 'bg-light whiteText'}`}>
                     <div className={`card-body border-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `} >
                         <div className={``}><FontAwesomeIcon className={`bg-danger p-2 rounded text-white`} icon={faDollarSign} /></div>
                         <h5 className={`mb-0 mt-2`}>Total Profit</h5>
@@ -134,7 +134,7 @@ function Crm({isDarkMode}) {
 
             {/* total sales */}
             <div className='col-6 col-xl-2 col-md-4 col-6 mb-4'>
-                <div className={`card totalSaleCard ${isDarkMode ? 'darkTheme' : 'bg-light whiteText'}`}>
+                <div className={`card h-100 totalSaleCard ${isDarkMode ? 'darkTheme' : 'bg-light whiteText'}`}>
                     <div className={`card-body border-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `} >
                         <div><FontAwesomeIcon className={`bg-primary p-2 rounded text-white`} icon={faChartColumn} /></div>
                         <h5 className={`mb-0 mt-2`}>Total Sales</h5>
@@ -185,8 +185,8 @@ function Crm({isDarkMode}) {
                         </div>
                     </div>
                     {/* chart options */}
-                    <div className={`card-body border-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `}>
-                        <div className='d-flex'>
+                    <div className={`card-body border-0 p-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `}>
+                        <div className='d-flex ms-2'>
                           <button className={`order me-2 d-flex flex-column align-items-center justify-content-center rounded p-1 ${isDarkMode ? 'darkBg darkText dotBorder' : 'bg-light whiteText dotBorder'}`} onClick={()=>handleGraphData('order')}>
                             <span><FontAwesomeIcon icon={faCartShopping} /></span>
                             <span>Order</span>
@@ -209,7 +209,7 @@ function Crm({isDarkMode}) {
                         </div>
                         {/* Earning chart */}
                         <div className={`w-100 h-100`} 
-                          style={{minWidth:'680px', minHeight:'250px'}}
+                          style={{minWidth:'', minHeight:'250px'}}
                         >
                           <EarningReportChart isDarkMode={isDarkMode} chartSeries={chartSeries}/>
                         </div>                        
@@ -231,7 +231,7 @@ function Crm({isDarkMode}) {
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </div>                       
                     </div>
-                    <div className={`card-body border-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `}>
+                    <div className={`card-body p-0 border-0 ${isDarkMode ? 'darkBg' : 'bg-light'} `}>
                       {/* Radial Graph */}
                       <div className={`w-100 h-100`} 
                          style={{minHeight:'330px', minWidth:'315px'}}
@@ -396,7 +396,7 @@ function Crm({isDarkMode}) {
                     </div>
                   </div>
                   <div className={`card-body border-0 ${isDarkMode ? 'darkBg' : 'bg-light whiteText'}`}>
-                    <table className={`w-100 ${isDarkMode ? 'table-dark' : 'bg-light whiteText'}`} style={isDarkMode ? { backgroundColor: '#2f3349', color: 'rgb(182, 190, 227)' } : { backgroundColor: '#f8f9fa', color: '#000000' }}>
+                    <table className={`w-100 ${isDarkMode ? 'table-dark' : 'bg-light whiteText'} table-responsive`} style={isDarkMode ? { backgroundColor: '#2f3349', color: 'rgb(182, 190, 227)' } : { backgroundColor: '#f8f9fa', color: '#000000' }}>
                       <thead className={`${isDarkMode ? 'darkBg' : 'bg-light whiteText'}`}>
                         <tr className={`border-bottom`}>
                           <th className={`pb-3`}>CARD</th>
