@@ -1,0 +1,31 @@
+/* General Styles */
+.mainWrapper {
+  margin: 0 26px 0 26px;
+  padding-top: 16px;
+  position:relative;
+}
+
+
+@media (min-width:1200px) {
+  .mainWrapper {
+    margin: 0 26px 0 26px;
+    padding-left: 250px !important;
+  }
+  
+}
+
+/* darkTheme with border and text color */
+.darkMain {
+  background-color: #2f3349;
+  color:rgb(182, 190, 227);
+}
+
+/* dark bg text color */
+.darkText{
+  color:rgb(182, 190, 227);
+}
+
+/* white bg text color */
+.whiteText {
+  color:#6f6b7d;
+}

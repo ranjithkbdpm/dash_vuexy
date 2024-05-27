@@ -1,0 +1,54 @@
+/* .navbar {
+    margin: 16px 26px 0 26px;
+} */
+
+/* .navBar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px; /* Adjust the value to match the margin-top */
+/*  z-index: 1020;
+} */
+
+/* navbar logo image size */
+.avatarLogo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* sidebarToggler button above 1200px */
+@media (min-width:1200px) {
+    .sidebarToggler {
+        display:none;
+    }    
+}
+
+/* dark theme with border */
+.darkTheme {
+   box-shadow: 0 0 0 1px #434968;
+   background-color: #2f3349;
+   color:rgb(182, 190, 227);
+}
+
+/* dark bg text color */
+.darkText{
+    color:rgb(182, 190, 227);
+}
+
+
+/* white bg text color */
+.whiteText {
+    color:#6f6b7d;
+}
+
+/* dark bg text */
+.darkText{
+    color:rgb(182, 190, 227);
+}
+
+/* dark bg and text color no border */
+.darkBg {
+    background-color: #2f3349;
+    color:rgb(182, 190, 227);
+}
+
